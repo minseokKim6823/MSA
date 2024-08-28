@@ -1,0 +1,17 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: 2st-service
+
+eureka:
+  instance:
+
+    #랜덤한 인스턴스 아이디 생성(server.port를 0으로 바꾼 이후)
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -5,13 +5,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Slf4j
+//@RequestMapping("/first-service")
 public class FirstServiceController {
 
-    /* 설명. port 번호 확일능ㄹ 위한 Environment 객체 생성자 주입 */
+    /* 설명. port 번호 확인을 위한 Environment 객체 생성자 주입 */
     private Environment env;
 
     @Autowired
