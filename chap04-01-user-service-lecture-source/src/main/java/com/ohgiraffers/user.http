@@ -1,0 +1,9 @@
+### SEND POST request with json body
+POST http://localhost:8111/users
+Content-Type: application/json
+
+{
+  "name": "홍길동",
+  "email": "test@gmail.com",
+  "pwd": "pass01"
+}
